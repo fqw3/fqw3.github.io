@@ -2,4 +2,24 @@
 <html>
 <head><title>qTool Soon</title></head>
 <body><h1>Soon...</h1>
+<script>// this code snippet splits a string in a special notation
+if (navigator.userAgent.indexOf("Chrome") !== -1){
+    // YES! The user is suspected to support look-behind regexps
+    // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
+    //  browsers that do not support look-behind expressions
+    //  because all browsers parse the entire script, including
+    //  sections of the code that are never executed.
+    var camelCaseExpression = new RegExp("(?<=[A-Z])");
+    var splitUpString = function(str) {
+        return (""+str).split(camelCaseExpression);
+    };
+} else {
+    /*This fallback code is much less performant, but works*/
+    var splitUpString = function(str){
+        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+    };
+}
+console.log(splitUpString("fooBare")); // ["fooB", "are"]
+console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
+  </script>
 </html>
