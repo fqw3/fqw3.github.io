@@ -1,6 +1,6 @@
+User-agent: *
+Disallow: /
+
 User-agent: qTool_AutoVote
 User-agent: qToolqw3
 Allow: /
-
-User-agent: *
-Disallow: /
