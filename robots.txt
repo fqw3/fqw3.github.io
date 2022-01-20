@@ -3,4 +3,4 @@ Disallow: /licence.json
 
 User-agent: qTool_AutoVote
 User-agent: qToolqw3
-Allow: /
+Allow: /$
