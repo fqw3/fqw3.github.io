@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /$
-Disallow: /*
-
-User-agent: qTool_AutoVote
-User-agent: qToolqw3
-Allow: /$
