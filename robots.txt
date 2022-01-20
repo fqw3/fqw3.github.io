@@ -1,5 +1,6 @@
 User-agent: *
-Disallow: /licence.json
+Disallow: /$
+Disallow: /*
 
 User-agent: qTool_AutoVote
 User-agent: qToolqw3
